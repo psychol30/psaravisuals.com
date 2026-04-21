@@ -93,8 +93,8 @@ const PROJECTS = {
     title: 'Diagrams & Concept Development',
     tag:   'Concept · Diagrams',
     images: [
-      'assets/images/projects/diagrams and concept development/parklane VIP HOTEL.jpg',
-      'assets/images/projects/diagrams and concept development/parklane hotel diagram 1.jpg',
+      'assets/images/projects/diagrams/parklane VIP HOTEL.jpg',
+      'assets/images/projects/diagrams/parklane hotel diagram 1.jpg',
     ]
   },
   pissouri: {
