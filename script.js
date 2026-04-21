@@ -20,18 +20,19 @@ const PROJECTS = {
     title: 'Seafront Villa Renovation',
     tag:   'Exterior · Interior',
     images: [
-      'assets/images/projects/seafront villa renovation/att.0ZcxkGwK1biPpCLc91EJT7H3AD5uAm5eFzmZyyN_5bE.jpg',
+      'assets/images/projects/seafront villa renovation/1pegeia exterior pool.jpg',
       'assets/images/projects/seafront villa renovation/att.3P6bKJTmBnMKxieAxXRMS1v0BeuOSp3OdMKNXnrzLnU.jpg',
-      'assets/images/projects/seafront villa renovation/0F2A9473-1683-4F7F-8A68-FB3DADC9F498.png',
-      'assets/images/projects/seafront villa renovation/att.40AXUI9PA_h-_HUhiZWaoFi0eh2wG1lZVliI4v9yLUw.jpg',
+      'assets/images/projects/seafront villa renovation/att.7dkzM_ePgu3NCqR33-fJHjEvLSymHDN6hQx5XhX2d5g.jpg',
       'assets/images/projects/seafront villa renovation/att.GP34LcUJJiy7lCI6_ASdR3UA9XNr4GFEyupljcFATqk.jpg',
       'assets/images/projects/seafront villa renovation/att.MhEDTQrVFKbZBi7aRbLappae0bvHtLijcf6O87GDK04.jpg',
-      'assets/images/projects/seafront villa renovation/att.7dkzM_ePgu3NCqR33-fJHjEvLSymHDN6hQx5XhX2d5g.jpg',
       'assets/images/projects/seafront villa renovation/att.Sp8YR_3fdb19eaJURIx5berKwPFfFTjhtkt5vg1wrTc.jpg',
       'assets/images/projects/seafront villa renovation/att.Y0v8n6v6IUf5RfMvB7eLpVogZeX3gJhD4jyBRoSFthY.jpg',
       'assets/images/projects/seafront villa renovation/att.c1sY63WkFXUnuurUNg4f6Im-7pUDMnNI7jb24IZTRMs.jpg',
       'assets/images/projects/seafront villa renovation/att.la4CXpmEpKq4RfpnngA2yRezSQb9_Ig7CErIv7sD3LY.jpg',
       'assets/images/projects/seafront villa renovation/att.lbMqXISmYx-atTx02p3kY6NSLRwww2aiHKH7E7nFwMQ.jpg',
+      'assets/images/projects/seafront villa renovation/b0F2A9473-1683-4F7F-8A68-FB3DADC9F498.png',
+      'assets/images/projects/seafront villa renovation/C2BD9B4D-4204-4D5C-8A23-2F8A82C7B8DC_1_105_c.jpeg',
+      'assets/images/projects/seafront villa renovation/F4EC6A5E-7DA4-4654-A82F-8DC5A799C333_1_102_o.jpeg',
     ]
   },
   house: {
@@ -62,20 +63,13 @@ const PROJECTS = {
       'assets/images/projects/apartment block in limassol/flat 1.11.png',
       'assets/images/projects/apartment block in limassol/flat 3.png',
       'assets/images/projects/apartment block in limassol/abc.jpg',
-      'assets/images/projects/apartment block in limassol/tv wall ideas/att.-E3GaBRXp9zsWuisiD3Ux2MyA-Rlw5ahPRZ2dkNplsY.jpg',
-      'assets/images/projects/apartment block in limassol/tv wall ideas/att.6IsUcdk-SsJKzWIGf1vq_53Y0s_3YYJcXYS6gvtJ9Uc.jpg',
-      'assets/images/projects/apartment block in limassol/tv wall ideas/att.9NPDRUMQ7tqd73_5S1EjRw_oVXLru7Gvy7nViaZrwqI.jpg',
-      'assets/images/projects/apartment block in limassol/tv wall ideas/att.J4VMB89RGcZaglUZlwu4Uf-26DuvtggCUy8X4xTdBk8.jpg',
-      'assets/images/projects/apartment block in limassol/tv wall ideas/att.J89KbyjFyLKjO8ZqkmztUv0qVx0reMvWn3txTCsFYKA.jpg',
-      'assets/images/projects/apartment block in limassol/tv wall ideas/att.JNsEoBqJrAO4hfGd9PkYnkR7KQKhCPhg4qNDCJP9PxY.jpg',
-      'assets/images/projects/apartment block in limassol/tv wall ideas/att.LKqgmQDPGqiRPJB2RFmkvaQNlnXjCxyPLQrhEO9gh3o.jpg',
-      'assets/images/projects/apartment block in limassol/tv wall ideas/att.YqSO91jrbyQazqvwRnLdGrJmDYRKu-lOkNxv--1B1mM.jpg',
-      'assets/images/projects/apartment block in limassol/tv wall ideas/att.b_v01jDeplxG_2rEaD2Fc_lbVJZsSuKSgidyJKm6jD8.jpg',
-      'assets/images/projects/apartment block in limassol/tv wall ideas/att.da2IuzT9FW0rgVx559xuuDhsbSnIQeMvvBk_6u00kXI.jpg',
-      'assets/images/projects/apartment block in limassol/tv wall ideas/att.mL1pv1rvmXxhX3Ae8Cef-68YVdPMSkDAfvfua4Qe1Lg.jpg',
-      'assets/images/projects/apartment block in limassol/tv wall ideas/att.rXfgxcis8QzXb4GQIpgSEXCuh18UErweiIC02WAX1uc.jpg',
-      'assets/images/projects/apartment block in limassol/tv wall ideas/att.uTJ4rHn6EF4ApopvdKUtYbNFGjTNmxWjJKBUYmc1HK0.jpg',
-      'assets/images/projects/apartment block in limassol/tv wall ideas/att.w1KhOlfx6scaEU1x_H4l_5lcxtzp_KWDs5izofSBVHU.jpg',
+      'assets/images/projects/apartment block in limassol/73FA4EDE-2805-4439-8198-3999A5CE882D_1_105_c.jpeg',
+      'assets/images/projects/apartment block in limassol/7D82BC61-0029-4955-B50A-0958DE4D4B6D_1_105_c.jpeg',
+      'assets/images/projects/apartment block in limassol/AB6BAF46-1DCA-4657-8E56-5BC62A78E47A_1_105_c.jpeg',
+      'assets/images/projects/apartment block in limassol/B0778FD0-C305-4765-A7CC-88550E00109B_1_102_o.jpeg',
+      'assets/images/projects/apartment block in limassol/CFD74525-1466-41A0-88A7-585FBAB0E0B1.jpeg',
+      'assets/images/projects/apartment block in limassol/E3C0578A-34DD-4D42-8982-85A8040895E4_1_105_c.jpeg',
+      'assets/images/projects/apartment block in limassol/EB4AD033-30F8-4E54-BC64-FD1BE88EA9E9_1_102_o.jpeg',
     ]
   },
   padel: {
@@ -84,6 +78,7 @@ const PROJECTS = {
     images: [
       'assets/images/projects/DREAM PADEL design and renders/courts view.jpg',
       'assets/images/projects/DREAM PADEL design and renders/1courts view.jpg',
+      'assets/images/projects/DREAM PADEL design and renders/12view from court day.jpg',
       'assets/images/projects/DREAM PADEL design and renders/side angle.jpg',
       'assets/images/projects/DREAM PADEL design and renders/entrance from road (dark).jpg',
       'assets/images/projects/DREAM PADEL design and renders/view from court day.jpg',
@@ -108,6 +103,59 @@ const PROJECTS = {
     images: [
       'assets/images/projects/diagrams and concept development/parklane VIP HOTEL.jpg',
       'assets/images/projects/diagrams and concept development/parklane hotel diagram 1.jpg',
+    ]
+  },
+  pissouri: {
+    title: 'Private Villa, Pissouri Bay',
+    tag:   'Exterior · Interior',
+    images: [
+      'assets/images/projects/Private Villa In Pissouri Bay/ALL VIEW SLAVA 2.jpg',
+      'assets/images/projects/Private Villa In Pissouri Bay/TOP PLAN VIEW SLAVA.jpg',
+      'assets/images/projects/Private Villa In Pissouri Bay/slava aerial.jpg',
+      'assets/images/projects/Private Villa In Pissouri Bay/kitchen1.png',
+      'assets/images/projects/Private Villa In Pissouri Bay/kitchen 2.jpg',
+      'assets/images/projects/Private Villa In Pissouri Bay/bedroom 1 slava.png',
+      'assets/images/projects/Private Villa In Pissouri Bay/slava bedroom 1.1.jpg',
+      'assets/images/projects/Private Villa In Pissouri Bay/bathroom 3.png',
+    ]
+  },
+  winery: {
+    title: 'Winery',
+    tag:   'Exterior · Interior',
+    images: [
+      'assets/images/projects/Winery/mikis winery 1.png',
+      'assets/images/projects/Winery/mikis winery back.png',
+      'assets/images/projects/Winery/mikis winery fire.png',
+      'assets/images/projects/Winery/mikis.png',
+      'assets/images/projects/Winery/plan view mikis.png',
+    ]
+  },
+  pyrgos: {
+    title: 'Concept Proposal — Multiple Houses',
+    tag:   'Exterior · Concept',
+    images: [
+      'assets/images/projects/concept proposal for multiple houses/pyrgos pool.png',
+      'assets/images/projects/concept proposal for multiple houses/[yrgos aerial final.jpg',
+      'assets/images/projects/concept proposal for multiple houses/pyrgos 3.png',
+      'assets/images/projects/concept proposal for multiple houses/pyrgos 6.png',
+      'assets/images/projects/concept proposal for multiple houses/pyrgos4.png',
+      'assets/images/projects/concept proposal for multiple houses/pyrgosss.png',
+    ]
+  },
+  mountain: {
+    title: 'Mountain House',
+    tag:   'Exterior',
+    images: [
+      'assets/images/projects/mountain house/KOKKINOS FRONT2.jpg',
+      'assets/images/projects/mountain house/KOKKINOS SIDE.png',
+    ]
+  },
+  privatehouse: {
+    title: 'Private House',
+    tag:   'Exterior',
+    images: [
+      'assets/images/projects/private house/STEF4.jpg',
+      'assets/images/projects/private house/STEF5.jpg',
     ]
   }
 };

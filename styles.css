@@ -185,14 +185,16 @@ a { color: inherit; text-decoration: none; }
 .nav-links a:hover { color: var(--text); }
 
 .nav-cta {
-  color: var(--accent) !important;
-  border: 1px solid var(--accent-dim);
+  color: #111e1e !important;
+  background: var(--accent);
+  border: 1px solid var(--accent);
   padding: 9px 20px;
   border-radius: 3px;
-  font-weight: 500 !important;
+  font-weight: 600 !important;
 }
 .nav-cta:hover {
-  background: rgba(200,169,110,0.1);
+  background: #d9bc85;
+  border-color: #d9bc85;
 }
 
 .nav-toggle {
@@ -243,9 +245,9 @@ a { color: inherit; text-decoration: none; }
   position: absolute;
   inset: 0;
   background: linear-gradient(
-    to top,
-    rgba(13,13,13,0.75) 0%,
-    rgba(13,13,13,0.2) 50%,
+    to bottom,
+    rgba(13,13,13,0.65) 0%,
+    rgba(13,13,13,0.2) 40%,
     rgba(13,13,13,0.1) 100%
   );
 }
