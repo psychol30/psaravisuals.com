@@ -145,8 +145,8 @@ const PROJECTS = {
     title: 'Private House',
     tag:   'Exterior',
     images: [
-      'assets/images/projects/private house/STEF4.jpg',
       'assets/images/projects/private house/STEF5.jpg',
+      'assets/images/projects/private house/STEF4.jpg',
     ]
   }
 };
