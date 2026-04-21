@@ -137,7 +137,7 @@ a { color: inherit; text-decoration: none; }
   align-items: center;
   justify-content: space-between;
   padding: 0 5%;
-  background: transparent;
+  background: linear-gradient(to bottom, rgba(13,13,13,0.20) 0%, transparent 100%);
   transition: background 0.3s;
 }
 
@@ -253,7 +253,7 @@ a { color: inherit; text-decoration: none; }
 .hero-content {
   position: relative;
   z-index: 1;
-  padding: 0 5%;
+  padding: 60px 5% 0;
   max-width: 780px;
   text-align: center;
   display: flex;
@@ -262,11 +262,12 @@ a { color: inherit; text-decoration: none; }
 }
 
 .hero-eyebrow {
-  font-size: 11px;
-  font-weight: 500;
-  letter-spacing: 0.25em;
+  font-size: 13px;
+  font-weight: 600;
+  letter-spacing: 0.3em;
   text-transform: uppercase;
-  color: var(--accent);
+  color: var(--text);
+  text-shadow: 0 1px 8px rgba(0,0,0,0.8);
   margin-bottom: 24px;
 }
 
@@ -855,7 +856,7 @@ a { color: inherit; text-decoration: none; }
 /* ============================================================
    QUOTATION
    ============================================================ */
-#quotation { background: var(--bg); }
+#quotation { background: var(--bg); padding: 120px 0; }
 
 .quote-grid {
   display: grid;
