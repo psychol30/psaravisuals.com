@@ -101,14 +101,14 @@ const PROJECTS = {
     title: 'Private Villa, Pissouri Bay',
     tag:   'Exterior · Interior',
     images: [
-      'assets/images/projects/Private Villa In Pissouri Bay/ALL VIEW SLAVA 2.jpg',
-      'assets/images/projects/Private Villa In Pissouri Bay/slava aerial.jpg',
-      'assets/images/projects/Private Villa In Pissouri Bay/bedroom 1 slava.png',
-      'assets/images/projects/Private Villa In Pissouri Bay/slava bedroom 1.1.jpg',
-      'assets/images/projects/Private Villa In Pissouri Bay/kitchen1.png',
-      'assets/images/projects/Private Villa In Pissouri Bay/kitchen 2.jpg',
-      'assets/images/projects/Private Villa In Pissouri Bay/bathroom 3.png',
-      'assets/images/projects/Private Villa In Pissouri Bay/TOP PLAN VIEW SLAVA.jpg',
+      'assets/images/projects/Private Villas/ALL VIEW SLAVA 2.jpg',
+      'assets/images/projects/Private Villas/slava aerial.jpg',
+      'assets/images/projects/Private Villas/bedroom 1 slava.png',
+      'assets/images/projects/Private Villas/slava bedroom 1.1.jpg',
+      'assets/images/projects/Private Villas/kitchen1.png',
+      'assets/images/projects/Private Villas/kitchen 2.jpg',
+      'assets/images/projects/Private Villas/bathroom 3.png',
+      'assets/images/projects/Private Villas/TOP PLAN VIEW SLAVA.jpg',
     ]
   },
   winery: {
