@@ -90,7 +90,7 @@ const PROJECTS = {
     ]
   },
   diagrams: {
-    title: 'Diagrams & Concept Development',
+    title: 'Diagrams',
     tag:   'Concept · Diagrams',
     images: [
       'assets/images/projects/diagrams/parklane VIP HOTEL.jpg',
@@ -161,15 +161,15 @@ document.querySelectorAll('.filter-btn').forEach(btn => {
       const tags = card.dataset.filter || '';
       const visible = filter === 'all' || tags.split(' ').includes(filter);
       card.classList.toggle('hidden', !visible);
-      if (visible) {
-        const img = card.querySelector('.project-img img');
-        if (filter === 'interior' && card.dataset.interiorImg) {
-          img.src = card.dataset.interiorImg;
-        } else if (filter === 'aerial' && card.dataset.aerialImg) {
-          img.src = card.dataset.aerialImg;
-        } else if (card.dataset.exteriorImg) {
-          img.src = card.dataset.exteriorImg;
-        }
+      const img = card.querySelector('.project-img img');
+      const defaultSrc = card.dataset.exteriorImg || img.getAttribute('data-default') || img.src;
+      if (!img.getAttribute('data-default')) img.setAttribute('data-default', img.src);
+      if (filter === 'interior' && card.dataset.interiorImg) {
+        img.src = card.dataset.interiorImg;
+      } else if (filter === 'aerial' && card.dataset.aerialImg) {
+        img.src = card.dataset.aerialImg;
+      } else {
+        img.src = img.getAttribute('data-default');
       }
     });
   });
