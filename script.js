@@ -159,7 +159,18 @@ document.querySelectorAll('.filter-btn').forEach(btn => {
     const filter = btn.dataset.filter;
     document.querySelectorAll('.project-card').forEach(card => {
       const tags = card.dataset.filter || '';
-      card.classList.toggle('hidden', filter !== 'all' && !tags.split(' ').includes(filter));
+      const visible = filter === 'all' || tags.split(' ').includes(filter);
+      card.classList.toggle('hidden', !visible);
+      if (visible) {
+        const img = card.querySelector('.project-img img');
+        if (filter === 'interior' && card.dataset.interiorImg) {
+          img.src = card.dataset.interiorImg;
+        } else if (filter === 'aerial' && card.dataset.aerialImg) {
+          img.src = card.dataset.aerialImg;
+        } else if (card.dataset.exteriorImg) {
+          img.src = card.dataset.exteriorImg;
+        }
+      }
     });
   });
 });
