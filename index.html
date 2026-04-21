@@ -142,108 +142,116 @@
         <h2>Selected projects</h2>
       </div>
 
+      <div class="project-filters">
+        <button class="filter-btn active" data-filter="all">All</button>
+        <button class="filter-btn" data-filter="exterior">Exterior</button>
+        <button class="filter-btn" data-filter="interior">Interior</button>
+        <button class="filter-btn" data-filter="plans">Plan Views</button>
+        <button class="filter-btn" data-filter="walkthrough">Walkthrough</button>
+      </div>
+
       <div class="projects-grid">
 
-        <div class="project-card" data-project="seafront">
+        <div class="project-card" data-project="seafront" data-filter="exterior interior">
           <div class="project-img">
             <img src="assets/images/projects/seafront villa renovation/1pegeia exterior pool.jpg" alt="Seafront Villa Renovation" loading="lazy" />
             <div class="project-hover"><span>View Project</span></div>
           </div>
           <div class="project-info">
             <h3>Seafront Villa Renovation</h3>
-            <span>Exterior · Interior · 12 renders</span>
+            <span>Exterior · Interior</span>
           </div>
         </div>
 
-        <div class="project-card" data-project="house">
+        <div class="project-card" data-project="house" data-filter="interior">
           <div class="project-img">
             <img src="assets/images/projects/house in outskirts of limassol/BC7BACC0-B745-4B6C-BA0B-48AF3BB8B283_1_105_c.jpeg" alt="House in Outskirts of Limassol" loading="lazy" />
             <div class="project-hover"><span>View Project</span></div>
           </div>
           <div class="project-info">
             <h3>House in Outskirts of Limassol</h3>
-            <span>Interior · 4 renders</span>
+            <span>Interior</span>
           </div>
         </div>
 
-        <div class="project-card" data-project="apartment">
+        <div class="project-card" data-project="apartment" data-filter="exterior interior plans">
           <div class="project-img">
             <img src="assets/images/projects/apartment block in limassol/markaris exterior.png" alt="Apartment Block in Limassol" loading="lazy" />
             <div class="project-hover"><span>View Project</span></div>
           </div>
           <div class="project-info">
             <h3>Apartment Block, Limassol</h3>
-            <span>Interior · Exterior · 28 renders</span>
+            <span>Exterior · Interior · Plans</span>
           </div>
         </div>
 
-        <div class="project-card" data-project="padel">
+        <div class="project-card" data-project="padel" data-filter="exterior plans">
           <div class="project-img">
             <img src="assets/images/projects/DREAM PADEL design and renders/courts view.jpg" alt="Dream Padel Club" loading="lazy" />
             <div class="project-hover"><span>View Project</span></div>
           </div>
           <div class="project-info">
             <h3>Dream Padel Club</h3>
-            <span>Exterior · Design · 9 renders</span>
+            <span>Exterior · Plans</span>
           </div>
         </div>
 
-        <div class="project-card" data-project="extension">
+        <div class="project-card" data-project="extension" data-filter="exterior interior">
           <div class="project-img">
             <img src="assets/images/projects/apartment extension Limassol/MARINOS 2026 Q.jpg" alt="Apartment Extension, Limassol" loading="lazy" />
             <div class="project-hover"><span>View Project</span></div>
           </div>
           <div class="project-info">
             <h3>Apartment Extension, Limassol</h3>
-            <span>Exterior · Interior · 3 renders</span>
+            <span>Exterior · Interior</span>
           </div>
         </div>
 
-        <div class="project-card" data-project="diagrams">
+        <div class="project-card" data-project="diagrams" data-filter="plans">
           <div class="project-img">
             <img src="assets/images/projects/diagrams and concept development/parklane VIP HOTEL.jpg" alt="Diagrams & Concept Development" loading="lazy" />
             <div class="project-hover"><span>View Project</span></div>
           </div>
           <div class="project-info">
             <h3>Diagrams & Concept Development</h3>
-            <span>Concept · Diagrams</span>
+            <span>Concept · Plans</span>
           </div>
         </div>
 
-        <div class="project-card" data-project="pissouri">
+        <div class="project-card" data-project="pissouri" data-filter="exterior interior plans">
           <div class="project-img">
             <img src="assets/images/projects/Private Villa In Pissouri Bay/ALL VIEW SLAVA 2.jpg" alt="Private Villa in Pissouri Bay" loading="lazy" />
             <div class="project-hover"><span>View Project</span></div>
           </div>
           <div class="project-info">
             <h3>Private Villa, Pissouri Bay</h3>
-            <span>Exterior · Interior</span>
+            <span>Exterior · Interior · Plans</span>
           </div>
         </div>
 
-        <div class="project-card" data-project="winery">
+        <div class="project-card" data-project="winery" data-filter="exterior interior plans">
           <div class="project-img">
             <img src="assets/images/projects/Winery/mikis winery 1.png" alt="Winery" loading="lazy" />
             <div class="project-hover"><span>View Project</span></div>
           </div>
           <div class="project-info">
             <h3>Winery</h3>
-            <span>Exterior · Interior</span>
+            <span>Exterior · Interior · Plans</span>
           </div>
         </div>
 
-        <div class="project-card" data-project="pyrgos">
+        <div class="project-card" data-project="pyrgos" data-filter="exterior plans">
           <div class="project-img">
             <img src="assets/images/projects/concept proposal for multiple houses/pyrgos pool.png" alt="Concept Proposal — Multiple Houses" loading="lazy" />
             <div class="project-hover"><span>View Project</span></div>
           </div>
           <div class="project-info">
             <h3>Concept Proposal — Multiple Houses</h3>
-            <span>Exterior · Concept</span>
+            <span>Exterior · Plans</span>
           </div>
         </div>
 
-        <div class="project-card" data-project="mountain">
+        <div class="project-card" data-project="mountain" data-filter="exterior">
           <div class="project-img">
             <img src="assets/images/projects/mountain house/KOKKINOS FRONT2.jpg" alt="Mountain House" loading="lazy" />
             <div class="project-hover"><span>View Project</span></div>
@@ -254,7 +262,7 @@
           </div>
         </div>
 
-        <div class="project-card" data-project="privatehouse">
+        <div class="project-card" data-project="privatehouse" data-filter="exterior">
           <div class="project-img">
             <img src="assets/images/projects/private house/STEF4.jpg" alt="Private House" loading="lazy" />
             <div class="project-hover"><span>View Project</span></div>

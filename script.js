@@ -160,6 +160,19 @@ const PROJECTS = {
   }
 };
 
+// ── PROJECT FILTERS ─────────────────────────────────────────
+document.querySelectorAll('.filter-btn').forEach(btn => {
+  btn.addEventListener('click', () => {
+    document.querySelectorAll('.filter-btn').forEach(b => b.classList.remove('active'));
+    btn.classList.add('active');
+    const filter = btn.dataset.filter;
+    document.querySelectorAll('.project-card').forEach(card => {
+      const tags = card.dataset.filter || '';
+      card.classList.toggle('hidden', filter !== 'all' && !tags.split(' ').includes(filter));
+    });
+  });
+});
+
 // ── LIGHTBOX ────────────────────────────────────────────────
 const lightbox = document.getElementById('lightbox');
 const lbImg    = document.getElementById('lbImg');
