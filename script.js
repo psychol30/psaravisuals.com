@@ -60,7 +60,6 @@ const PROJECTS = {
       'assets/images/projects/apartment block in limassol/flat 3.png',
       'assets/images/projects/apartment block in limassol/73FA4EDE-2805-4439-8198-3999A5CE882D_1_105_c.jpeg',
       'assets/images/projects/apartment block in limassol/AB6BAF46-1DCA-4657-8E56-5BC62A78E47A_1_105_c.jpeg',
-      'assets/images/projects/apartment block in limassol/B0778FD0-C305-4765-A7CC-88550E00109B_1_102_o.jpeg',
       'assets/images/projects/apartment block in limassol/E3C0578A-34DD-4D42-8982-85A8040895E4_1_105_c.jpeg',
       'assets/images/projects/apartment block in limassol/EB4AD033-30F8-4E54-BC64-FD1BE88EA9E9_1_102_o.jpeg',
     ]
@@ -85,6 +84,7 @@ const PROJECTS = {
       'assets/images/projects/apartment extension Limassol/MARINOS 2026 Q.jpg',
       'assets/images/projects/apartment extension Limassol/marinos 2 2026.jpg',
       'assets/images/projects/apartment extension Limassol/marinos 3 2026.jpg',
+      'assets/images/projects/apartment extension Limassol/marinos flat renovation video.mp4',
     ]
   },
   diagrams: {
@@ -121,12 +121,13 @@ const PROJECTS = {
     title: 'Concept Proposal — Multiple Houses',
     tag:   'Exterior · Concept',
     images: [
-      'assets/images/projects/concept proposal for multiple houses/[yrgos aerial final.jpg',
+      'assets/images/projects/concept proposal for multiple houses/pyrgos aerial final.jpg',
       'assets/images/projects/concept proposal for multiple houses/pyrgos pool.png',
       'assets/images/projects/concept proposal for multiple houses/pyrgos 3.png',
       'assets/images/projects/concept proposal for multiple houses/pyrgos 6.png',
       'assets/images/projects/concept proposal for multiple houses/pyrgos4.png',
       'assets/images/projects/concept proposal for multiple houses/pyrgosss.png',
+      'assets/images/projects/concept proposal for multiple houses/Pyrgos Video.mp4',
     ]
   },
   mountain: {
@@ -174,6 +175,7 @@ document.querySelectorAll('.filter-btn').forEach(btn => {
 // ── LIGHTBOX ────────────────────────────────────────────────
 const lightbox = document.getElementById('lightbox');
 const lbImg    = document.getElementById('lbImg');
+const lbVideo  = document.getElementById('lbVideo');
 const lbTitle  = document.getElementById('lbTitle');
 const lbTag    = document.getElementById('lbTag');
 const lbCounter= document.getElementById('lbCounter');
@@ -198,11 +200,19 @@ function openLightbox(projectKey) {
   // Build thumbnails
   lbThumbs.innerHTML = '';
   p.images.forEach((src, i) => {
-    const img = document.createElement('img');
-    img.src = src;
-    img.className = 'lb-thumb' + (i === 0 ? ' active' : '');
-    img.addEventListener('click', () => goTo(i));
-    lbThumbs.appendChild(img);
+    const isVideo = /\.(mp4|mov|webm)$/i.test(src);
+    let el;
+    if (isVideo) {
+      el = document.createElement('div');
+      el.className = 'lb-thumb lb-thumb-video' + (i === 0 ? ' active' : '');
+      el.innerHTML = '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" width="28" height="28"><polygon points="5 3 19 12 5 21 5 3"/></svg>';
+    } else {
+      el = document.createElement('img');
+      el.src = src;
+      el.className = 'lb-thumb' + (i === 0 ? ' active' : '');
+    }
+    el.addEventListener('click', () => goTo(i));
+    lbThumbs.appendChild(el);
   });
 
   goTo(0);
@@ -215,16 +225,28 @@ function closeLightbox() {
   lightbox.classList.remove('open');
   lightbox.setAttribute('aria-hidden', 'true');
   document.body.style.overflow = '';
+  lbVideo.pause();
 }
 
 function goTo(index) {
   currentIndex = (index + currentImages.length) % currentImages.length;
-  lbImg.src = currentImages[currentIndex];
+  const src = currentImages[currentIndex];
+  const isVideo = /\.(mp4|mov|webm)$/i.test(src);
+  if (isVideo) {
+    lbVideo.src = src;
+    lbVideo.style.display = '';
+    lbImg.style.display = 'none';
+    lbVideo.load();
+  } else {
+    lbImg.src = src;
+    lbImg.style.display = '';
+    lbVideo.style.display = 'none';
+    lbVideo.pause();
+  }
   lbCounter.textContent = `${currentIndex + 1} / ${currentImages.length}`;
   lbThumbs.querySelectorAll('.lb-thumb').forEach((t, i) => {
     t.classList.toggle('active', i === currentIndex);
   });
-  // Scroll active thumb into view
   const active = lbThumbs.querySelector('.lb-thumb.active');
   if (active) active.scrollIntoView({ inline: 'nearest', behavior: 'smooth' });
 }

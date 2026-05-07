@@ -780,6 +780,14 @@ a { color: inherit; text-decoration: none; }
   border-color: var(--accent);
 }
 
+.lb-thumb-video {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: var(--surface2);
+  color: var(--accent);
+}
+
 .work-item {
   position: relative;
   overflow: hidden;
