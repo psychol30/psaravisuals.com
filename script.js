@@ -271,16 +271,36 @@ document.addEventListener('keydown', e => {
 // ── CONTACT FORM ─────────────────────────────────────────────
 const form     = document.getElementById('contactForm');
 const formNote = document.getElementById('formNote');
-form.addEventListener('submit', e => {
+form.addEventListener('submit', async e => {
   e.preventDefault();
   if (!form.name.value.trim() || !form.email.value.trim() || !form.message.value.trim()) {
     formNote.style.color = '#e07070';
     formNote.textContent = 'Please fill in your name, email, and project brief.';
     return;
   }
-  formNote.style.color = 'var(--accent)';
-  formNote.textContent = "Message received — I'll be in touch within 24 hours.";
-  form.reset();
+  const btn = form.querySelector('button[type="submit"]');
+  btn.disabled = true;
+  btn.textContent = 'Sending…';
+  try {
+    const res = await fetch('https://formspree.io/f/meedlwoq', {
+      method: 'POST',
+      headers: { 'Accept': 'application/json' },
+      body: new FormData(form)
+    });
+    if (res.ok) {
+      formNote.style.color = 'var(--accent)';
+      formNote.textContent = "Message received — I'll be in touch within 24 hours.";
+      form.reset();
+    } else {
+      formNote.style.color = '#e07070';
+      formNote.textContent = 'Something went wrong. Please email hello@psaravisuals.com directly.';
+    }
+  } catch {
+    formNote.style.color = '#e07070';
+    formNote.textContent = 'Something went wrong. Please email hello@psaravisuals.com directly.';
+  }
+  btn.disabled = false;
+  btn.textContent = 'Send Message';
 });
 
 // ── FADE-IN ON SCROLL ────────────────────────────────────────
