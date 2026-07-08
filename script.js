@@ -173,16 +173,18 @@ document.querySelectorAll('.filter-btn').forEach(btn => {
 });
 
 // ── LIGHTBOX ────────────────────────────────────────────────
-const lightbox = document.getElementById('lightbox');
-const lbImg    = document.getElementById('lbImg');
-const lbVideo  = document.getElementById('lbVideo');
-const lbTitle  = document.getElementById('lbTitle');
-const lbTag    = document.getElementById('lbTag');
-const lbCounter= document.getElementById('lbCounter');
-const lbThumbs = document.getElementById('lbThumbs');
-const lbClose  = document.getElementById('lbClose');
-const lbPrev   = document.getElementById('lbPrev');
-const lbNext   = document.getElementById('lbNext');
+const lightbox    = document.getElementById('lightbox');
+const lbImg       = document.getElementById('lbImg');
+const lbVideo     = document.getElementById('lbVideo');
+const lbTitle     = document.getElementById('lbTitle');
+const lbTag       = document.getElementById('lbTag');
+const lbCounter   = document.getElementById('lbCounter');
+const lbGrid      = document.getElementById('lbGrid');
+const lbStageWrap = document.getElementById('lbStageWrap');
+const lbClose     = document.getElementById('lbClose');
+const lbBack      = document.getElementById('lbBack');
+const lbPrev      = document.getElementById('lbPrev');
+const lbNext      = document.getElementById('lbNext');
 
 let currentImages = [];
 let currentIndex  = 0;
@@ -197,28 +199,50 @@ function openLightbox(projectKey) {
   lbTitle.textContent = p.title;
   lbTag.textContent   = p.tag;
 
-  // Build thumbnails
-  lbThumbs.innerHTML = '';
+  // Build the full photo grid
+  lbGrid.innerHTML = '';
   p.images.forEach((src, i) => {
     const isVideo = /\.(mp4|mov|webm)$/i.test(src);
-    let el;
+    const item = document.createElement('div');
+    item.className = 'lb-grid-item' + (isVideo ? ' is-video' : '');
+
+    const media = document.createElement(isVideo ? 'video' : 'img');
+    media.src = src;
     if (isVideo) {
-      el = document.createElement('div');
-      el.className = 'lb-thumb lb-thumb-video' + (i === 0 ? ' active' : '');
-      el.innerHTML = '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" width="28" height="28"><polygon points="5 3 19 12 5 21 5 3"/></svg>';
+      media.muted = true;
+      media.playsInline = true;
     } else {
-      el = document.createElement('img');
-      el.src = src;
-      el.className = 'lb-thumb' + (i === 0 ? ' active' : '');
+      media.loading = 'lazy';
+      media.alt = p.title;
     }
-    el.addEventListener('click', () => goTo(i));
-    lbThumbs.appendChild(el);
+    item.appendChild(media);
+
+    if (isVideo) {
+      item.insertAdjacentHTML('beforeend', '<svg class="lb-grid-play" viewBox="0 0 24 24" fill="currentColor"><polygon points="6 3 20 12 6 21 6 3"/></svg>');
+    }
+
+    item.addEventListener('click', () => openStage(i));
+    lbGrid.appendChild(item);
   });
 
-  goTo(0);
+  showGrid();
   lightbox.classList.add('open');
   lightbox.setAttribute('aria-hidden', 'false');
   document.body.style.overflow = 'hidden';
+}
+
+function showGrid() {
+  lbGrid.style.display = 'grid';
+  lbStageWrap.style.display = 'none';
+  lbBack.style.display = 'none';
+  lbVideo.pause();
+}
+
+function openStage(index) {
+  lbGrid.style.display = 'none';
+  lbStageWrap.style.display = 'flex';
+  lbBack.style.display = '';
+  goTo(index);
 }
 
 function closeLightbox() {
@@ -244,11 +268,6 @@ function goTo(index) {
     lbVideo.pause();
   }
   lbCounter.textContent = `${currentIndex + 1} / ${currentImages.length}`;
-  lbThumbs.querySelectorAll('.lb-thumb').forEach((t, i) => {
-    t.classList.toggle('active', i === currentIndex);
-  });
-  const active = lbThumbs.querySelector('.lb-thumb.active');
-  if (active) active.scrollIntoView({ inline: 'nearest', behavior: 'smooth' });
 }
 
 // Project card clicks
@@ -257,13 +276,19 @@ document.querySelectorAll('.project-card').forEach(card => {
 });
 
 lbClose.addEventListener('click', closeLightbox);
+lbBack.addEventListener('click', showGrid);
 document.getElementById('lightbox').querySelector('.lb-backdrop').addEventListener('click', closeLightbox);
 lbPrev.addEventListener('click', () => goTo(currentIndex - 1));
 lbNext.addEventListener('click', () => goTo(currentIndex + 1));
 
 document.addEventListener('keydown', e => {
   if (!lightbox.classList.contains('open')) return;
-  if (e.key === 'Escape')     closeLightbox();
+  const inStage = lbStageWrap.style.display !== 'none';
+  if (e.key === 'Escape') {
+    if (inStage) showGrid();
+    else closeLightbox();
+  }
+  if (!inStage) return;
   if (e.key === 'ArrowRight') goTo(currentIndex + 1);
   if (e.key === 'ArrowLeft')  goTo(currentIndex - 1);
 });

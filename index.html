@@ -422,26 +422,35 @@
     <div class="lb-backdrop"></div>
     <div class="lb-inner">
       <div class="lb-header">
-        <div>
-          <span class="lb-tag" id="lbTag"></span>
-          <h3 class="lb-title" id="lbTitle"></h3>
+        <div class="lb-header-left">
+          <button class="lb-back" id="lbBack" aria-label="Back to all photos" style="display:none;">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><polyline points="15 18 9 12 15 6"/></svg>
+          </button>
+          <div>
+            <span class="lb-tag" id="lbTag"></span>
+            <h3 class="lb-title" id="lbTitle"></h3>
+          </div>
         </div>
         <button class="lb-close" id="lbClose" aria-label="Close">
           <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg>
         </button>
       </div>
-      <div class="lb-stage">
-        <button class="lb-arrow lb-prev" id="lbPrev" aria-label="Previous">
-          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><polyline points="15 18 9 12 15 6"/></svg>
-        </button>
-        <img class="lb-img" id="lbImg" src="" alt="" />
-        <video class="lb-img" id="lbVideo" src="" controls style="display:none;max-height:70vh;width:auto;max-width:100%;"></video>
-        <button class="lb-arrow lb-next" id="lbNext" aria-label="Next">
-          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><polyline points="9 18 15 12 9 6"/></svg>
-        </button>
+
+      <div class="lb-grid" id="lbGrid"></div>
+
+      <div class="lb-stage-wrap" id="lbStageWrap" style="display:none;">
+        <div class="lb-stage">
+          <button class="lb-arrow lb-prev" id="lbPrev" aria-label="Previous">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><polyline points="15 18 9 12 15 6"/></svg>
+          </button>
+          <img class="lb-img" id="lbImg" src="" alt="" />
+          <video class="lb-img" id="lbVideo" src="" controls style="display:none;max-height:70vh;width:auto;max-width:100%;"></video>
+          <button class="lb-arrow lb-next" id="lbNext" aria-label="Next">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><polyline points="9 18 15 12 9 6"/></svg>
+          </button>
+        </div>
+        <div class="lb-counter" id="lbCounter"></div>
       </div>
-      <div class="lb-counter" id="lbCounter"></div>
-      <div class="lb-thumbs" id="lbThumbs"></div>
     </div>
   </div>
 
