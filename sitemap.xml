@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+        xmlns:image="http://www.google.com/schemas/sitemap-image/1.1">
+  <url>
+    <loc>https://psaravisuals.com/</loc>
+    <lastmod>2026-08-31</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>1.0</priority>
+
+    <image:image>
+      <image:loc>https://psaravisuals.com/assets/images/heroshot.jpg</image:loc>
+      <image:title>Psara Visuals — Architectural 3D Visualization</image:title>
+    </image:image>
+
+    <image:image>
+      <image:loc>https://psaravisuals.com/assets/images/projects/seafront%20villa%20renovation/att.7dkzM_ePgu3NCqR33-fJHjEvLSymHDN6hQx5XhX2d5g.jpg</image:loc>
+      <image:title>Seafront Villa Renovation — 3D Render</image:title>
+    </image:image>
+
+    <image:image>
+      <image:loc>https://psaravisuals.com/assets/images/projects/house%20in%20outskirts%20of%20limassol/BC7BACC0-B745-4B6C-BA0B-48AF3BB8B283_1_105_c.jpeg</image:loc>
+      <image:title>House in Outskirts of Limassol — Interior Render</image:title>
+    </image:image>
+
+    <image:image>
+      <image:loc>https://psaravisuals.com/assets/images/projects/apartment%20block%20in%20limassol/markaris%203.2.png</image:loc>
+      <image:title>Apartment Block, Limassol — 3D Visualization</image:title>
+    </image:image>
+
+    <image:image>
+      <image:loc>https://psaravisuals.com/assets/images/projects/PADEL%20design%20and%20renders/12view%20from%20court%20day.jpg</image:loc>
+      <image:title>Dream Padel Club — Exterior Render</image:title>
+    </image:image>
+
+    <image:image>
+      <image:loc>https://psaravisuals.com/assets/images/projects/apartment%20extension%20Limassol/MARINOS%202026%20Q.jpg</image:loc>
+      <image:title>Apartment Extension, Limassol — 3D Visualization</image:title>
+    </image:image>
+
+    <image:image>
+      <image:loc>https://psaravisuals.com/assets/images/projects/Private%20Villas/ALL%20VIEW%20SLAVA%202.jpg</image:loc>
+      <image:title>Private Villa, Pissouri Bay — Exterior Render</image:title>
+    </image:image>
+
+    <image:image>
+      <image:loc>https://psaravisuals.com/assets/images/projects/Winery/mikis%20winery%201.png</image:loc>
+      <image:title>Winery — 3D Visualization</image:title>
+    </image:image>
+
+    <image:image>
+      <image:loc>https://psaravisuals.com/assets/images/projects/mountain%20house/KOKKINOS%20FRONT2.jpg</image:loc>
+      <image:title>Mountain House — Exterior Render</image:title>
+    </image:image>
+
+    <image:image>
+      <image:loc>https://psaravisuals.com/assets/images/projects/private%20house/STEF5.jpg</image:loc>
+      <image:title>Private House — Exterior Render</image:title>
+    </image:image>
+
+  </url>
+</urlset>
